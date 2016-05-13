@@ -97,9 +97,102 @@ h1 {
   color: #4285be;
   margin: 0 5% 80px;
 }
+.eye {
+  width: 33%;
+  height: auto;
+  border-radius: 100px;
+  border: 4px solid #000;
+  background: #000;
+  margin: auto;
+  position: absolute;
+  top: 45%;
+  left: 33%;
+}
+.eye .eye_white {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.book_about {
+  width: 90%;
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+  margin: auto;
+}
+.book_about img {
+  /*max-height:595px;*/
+  max-wdth: 418px;
+  width: 100%;
+}
+.black_eye {
+  position: absolute;
+  width: 17%;
+  height: auto;
+  background: #000;
+  top: 42%;
+  left: 42%;
+  border-radius: 50px;
+}
+.book_top {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.row.book {
+  margin-bottom: 60px;
+}
+.advantages {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 60px;
+  width: 80%;
+  margin: auto;
+}
+.advantages img {
+  display: block;
+  margin: auto;
+  margin-bottom: 25px;
+  width: 100%;
+}
+button.buy {
+  width: 100%;
+  font-size: 1.75rem;
+  color: #fff;
+  padding: 15px;
+  background: #805582;
+  border: none;
+  border-radius: 10px;
+  background: #805e82;
+  background: -moz-linear-gradient(top, #805e82 0%, #623d64 100%);
+  background: -webkit-linear-gradient(top, #805e82 0%, #623d64 100%);
+  background: linear-gradient(to bottom, #805e82 0%, #623d64 100%);
+  margin-bottom: 30px;
+}
+.scraffi {
+  font-size: 1rem;
+  font-style: italic;
+  color: #dcdcdc;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 80px;
+  max-width: 440px;
+  margin: 0 auto 100px;
+}
+.scraffi img {
+  display: block;
+  width: 70px;
+  margin: auto;
+  margin-top: 10px;
+}
 @media only screen and (min-width: 500px) {
   h1 {
     font-size: 3.4rem;
+  }
+  button.buy {
+    width: 440px;
+    margin: 0 auto 30px;
+    display: block;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -108,6 +201,49 @@ h1 {
     max-width: 1200px;
     margin: auto;
     display: block;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  .row.about {
+    max-width: 640px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  p {
+    margin: 30px 0;
+  }
+  row.book_eye {
+    margin-bottom: 30px;
+  }
+  .left {
+    float: left;
+    width: 20%;
+    padding-left: 2%;
+  }
+  .right {
+    float: right;
+    width: 20%;
+    padding-right: 2%;
+  }
+  .book_about,
+  .book_top {
+    width: 65%;
+    margin: auto;
+    position: relative;
+  }
+  .book_about img {
+    width: 100%;
+  }
+  .book_top {
+    margin: 50px auto 0px;
+  }
+  .book_eye {
+    display: inline-block;
+    width: 55%;
+  }
+  .advantages {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 680px) {
