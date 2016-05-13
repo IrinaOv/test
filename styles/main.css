@@ -1,7 +1,145 @@
+html {
+  font-size: 16px;
+}
 body {
-  background: #cc594a;
-  color: #b8cc24;
+  background: #ffffff;
+  color: #333333;
+  padding: 40px 10px 0;
+  max-width: 1366px;
+  margin: auto;
+  /*width:320px;*/
+  font-family: Arial;
+}
+@font-face {
+  font-family: fuchsia;
+  src: url(../font/fuchsia.otf);
+  
+  /* Гарнитура шрифта */
+  /* Путь к файлу со шрифтом */
+}
+.row {
+  margin-bottom: 40px;
+}
+.logo {
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.logo img {
+  width: 100%;
+  max-width: 300px;
+}
+form.form_search {
+  position: relative;
+  width: 264px;
+  margin: auto;
+}
+form.form_search input[type="search"] {
+  width: 264px;
+  height: 30px;
+  border: 1px solid #bfbfbf;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+form.form_search .search {
+  position: absolute;
+  background: url(../images/search.png);
+  content: " ";
+  width: 20px;
+  height: 19px;
+  background-position: 0 0;
+  left: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+footer img {
+  display: block;
+  margin: auto;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 h1 {
-  background: #8bc5ff;
+  font-size: 2.38rem;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+  color: #000000;
+}
+.row_books {
+  max-width: 1200px;
+  margin: auto;
+}
+.book {
+  margin-bottom: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+.book img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: 300px;
+  max-width: 210px;
+}
+.book .book-title {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 5%;
+}
+.button {
+  margin: auto;
+  border: 2px solid #96c2e4;
+  border-radius: 15px;
+  padding: 14px;
+  text-align: center;
+  color: #4285be;
+  margin: 0 5% 80px;
+}
+@media only screen and (min-width: 500px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+    max-width: 1200px;
+    margin: auto;
+    display: block;
+  }
+}
+@media only screen and (min-width: 680px) {
+  .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  form.form_search {
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+  }
+  form.form_search .search {
+    top: 15px;
+  }
+  header {
+    padding: 0 40px;
+    margin: auto;
+  }
+  .book {
+    width: 32%;
+    margin-bottom: 70px;
+  }
+  .button {
+    width: 280px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: -20px;
+  }
+}
+@media only screen and (min-width: 953px) {
+  .book {
+    width: 24%;
+  }
 }
