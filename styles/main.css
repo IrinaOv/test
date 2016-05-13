@@ -114,6 +114,25 @@ h1 {
   height: 100%;
   border-radius: 100px;
 }
+.eye .eye_white {
+  animation-name: shadow;
+  animation-duration: 7s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow {
+  0% {
+    transform: scaleY(1);
+  }
+  35% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+}
 .book_about {
   width: 90%;
   position: relative;
