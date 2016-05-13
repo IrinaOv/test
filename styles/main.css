@@ -245,6 +245,55 @@ ul li:before {
   font-size: 1.75rem;
   text-align: center;
 }
+input[type="text"],
+input[type="textarea"] {
+  display: block;
+  width: 90%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+input[type="textarea"] {
+  height: 120px;
+}
+.row_forma {
+  font-size: 1.5rem;
+}
+.forma {
+  font-size: 1.2rem;
+  margin: auto;
+}
+.forma form > div {
+  margin-bottom: 30px;
+}
+.forma form > div p {
+  margin: 10px 0;
+}
+.forma .book {
+  width: 100%;
+  text-align: center;
+}
+.forma form input[type="submit"] {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: #cecece;
+  font-size: 1.2rem;
+  margin-bottom: 80px;
+}
+.forma input {
+  border: 2px solid #000;
+  padding: 2px 5px;
+}
+.summ {
+  text-align: center;
+}
+.forma_book {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 @media only screen and (min-width: 500px) {
   h1 {
     font-size: 3.4rem;
@@ -327,6 +376,26 @@ ul li:before {
   .row.incut {
     margin-bottom: 50px;
   }
+  .row_forma {
+    max-width: 1024px;
+    margin: 25px auto;
+  }
+  .forma {
+    max-width: 1024px;
+  }
+  .forma form > div {
+    display: inline-block;
+    margin: 2%;
+    vertical-align: top;
+  }
+  .comments {
+    width: 40%;
+  }
+  .forma form input[type="submit"] {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 100px;
+  }
 }
 @media only screen and (min-width: 680px) {
   .logo {
@@ -354,6 +423,16 @@ ul li:before {
     margin: auto;
     margin-bottom: 100px;
     margin-top: -20px;
+  }
+  .forma_book {
+    text-align: center;
+    width: 20%;
+  }
+  .forma_book img {
+    width: 100%;
+  }
+  .comments {
+    width: 35%;
   }
 }
 @media only screen and (min-width: 953px) {
