@@ -97,6 +97,9 @@ h1 {
   color: #4285be;
   margin: 0 5% 80px;
 }
+.button:hover {
+  cursor: pointer;
+}
 .eye {
   width: 33%;
   height: auto;
