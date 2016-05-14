@@ -19,6 +19,12 @@ a,a:hover{
 button:hover{
 	cursor:pointer
 }
+a.name_book{
+	color:#0260F6
+}
+a.name_book:hover{
+	text-decoration:underline
+}
 .row{margin-bottom:40px}
 .logo{
 	margin:auto;
@@ -99,6 +105,18 @@ max-width:1200px;margin:auto
 .button:hover{
 	cursor:pointer;
 }
+button.order {
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: #cecece;
+  font-size: 1.2rem;
+  margin-bottom: 80px;
+	display:block
+}
+
 .eye{
 	width:33%;
 	height:auto;
@@ -241,14 +259,14 @@ padding:0;margin:0;
 	font-size:1.75rem;
 	text-align:center
 }
-input[type="text"],input[type="textarea"]{
+input[type="text"],textarea{
 	display:block;
 	width:90%; 
 	font-size:1.2rem;
 	margin-bottom:10px
 }
-input[type="textarea"]{
-	height:120px
+.comments  textarea {
+  height: 145px;
 }
 .row_forma{
 	font-size:1.5rem
@@ -266,17 +284,7 @@ input[type="textarea"]{
 		width:100%;
 		text-align:center
 	}
-	form input[type="submit"]{
-		width:100%;
-		margin:auto;
-		padding:10px;
-		border:2px solid #000;
-		border-radius:10px;
-		background:#cecece;
-		font-size:1.2rem;
-		margin-bottom:80px
-	}
-	input{
+	input, textarea{
 		border:2px solid #000;
 		padding:2px 5px
 	}

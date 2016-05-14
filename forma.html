@@ -17,36 +17,32 @@
 				<h1>Мы издаем книги — вы их можете не читать</h1>
 			</div>
 			<div class="row row_forma">
-				Оформить заказ на книгу <a href="#">История земли XXX в.</a>
+				Оформить заказ на книгу <a href="#" class="name_book"></a>
 			</div>
 			<form>
 				<div class="info">
 					Имя: <input type="text" placeholder="Имя" name="Имя">
 					Телефон: <input type="text" placeholder="Телефон" name="Телефон">
 					Эл.адрес: <input type="text" placeholder="Эл.адрес" name="Эл.адрес">
-					<p>Способ доставки:
-					<p><input type="radio" name="доставка" value="Самовызов">Самовызов - бесплатно</p>
-					<p><input type="radio" name="доставка" value="32Z">Доставка - 32 Z</p>
-					<p><input type="radio" name="доставка" value="почта">Почтой - 3 Z</p>		</p>
+					<p class="delivery">Способ доставки:
+					</p>
 				</div>
 				<div class="comments">
 					Комментарии к заказу:
-					<input type="textarea"name="comments">
-					<p>Способ оплаты:
-					<p><input type="radio" name="оплата" value="Наличными">Наличными</p>
-					<p><input type="radio" name="оплата" value="кредит">В кредит</p>
-					<p><input type="radio" name="оплата" value="Наложенный">Наложенный платеж</p>	</p>
+					<textarea name="Комментарий" ></textarea>
+					<p class="payment">Способ оплаты:
+					</p>
 				</div>
 				<div class="forma_book">
-					<img src="images/book.png">
 				</div>
-					<p class="summ row_forma">Итого к оплате: <span>546 Z</span></p>
-				<input type="submit" value="Оформить заказ">
 			</form>
-			
+				<p class="summ row_forma">Итого к оплате: <span></span></p>
+				<button class="order">Оформить заказ</button>		
 		</main>
 		<footer>
 			<a href="about.html"><img src="images/footer.png"></a>
 		</footer>
+		<script src="jquery-1.12.3.js"></script>
+	<script src="order.js"></script>
 	</body>
 </html>
