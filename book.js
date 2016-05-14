@@ -11,9 +11,10 @@ $(document).ready(function(){
 			for(var i=0;i<books.features.length;i++){
 				$('.right').append('<div class="advantages"><img src="'+books.features[i].pic+'"'+'alt=""'+'>«'+books.features[i].title+'»</div>')
 			}
-			$('.buy span').append(books.price+'Z')
-			console.log(books);
-			
+			$('.buy span').append(books.price+'Z');
+			$('.buy').on('click',function(){
+				$(this).parent('a').attr('href','forma.html#'+idBook);
+			})
 		}
 	})
 })
