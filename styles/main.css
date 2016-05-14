@@ -17,6 +17,11 @@ body {
   /* Гарнитура шрифта */
   /* Путь к файлу со шрифтом */
 }
+a,
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
 .row {
   margin-bottom: 40px;
 }
