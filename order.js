@@ -17,7 +17,7 @@ $(document).ready(function(){
 		url:'https://netology-fbb-store-api.herokuapp.com/order/delivery',
 		success:function(delivery){
 			delivery.forEach(function(item,i){
-				$('.delivery').append('<p><input type="radio" name="доставка" value="'+item.name+'" data-price="'+item.price+'">'+item.name+' - '+item.price+'Z'+'</p>')
+				$('.delivery').append('<p><input type="radio" name="доставка" value="'+item.name+'" data-price="'+item.price+'"data-address="'+item.needAdress+'">'+item.name+' - '+item.price+'Z'+'</p>')
 			})
 			$('input:radio[name=доставка]').on('change', function (){
 				priceBook=$('.forma_book').attr('data-price');
@@ -27,6 +27,13 @@ $(document).ready(function(){
 				$('.summ span').attr('data-count',price);
 				$('.summ span').text($('.summ span').attr('data-count')+'Z');
 				p=true;
+				if($(this).attr('data-address')=='true')
+				{
+					$('form .adress').removeClass('disable')
+				}
+				else{
+					$('form .adress').addClass('disable')
+				}
 			})
 		}
 	})

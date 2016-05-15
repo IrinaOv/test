@@ -76,6 +76,9 @@ form .error_forma span {
   display: block;
   padding: 5px 0;
 }
+form .adress.disable {
+  display: none;
+}
 button:focus,
 input:focus {
   outline: none;
