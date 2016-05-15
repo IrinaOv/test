@@ -11,6 +11,7 @@ $(document).ready(function(){
 			$('.summ span').text($('.summ span').attr('data-count')+'Z');	
 		}
 	})
+	var d=false;
 	var p=false;
 	var s=false;
 	$.ajax({
@@ -26,7 +27,7 @@ $(document).ready(function(){
 				price=prise1+price2;
 				$('.summ span').attr('data-count',price);
 				$('.summ span').text($('.summ span').attr('data-count')+'Z');
-				p=true;
+				d=true;
 				if($(this).attr('data-address')=='true')
 				{
 					$('form .adress').removeClass('disable')
@@ -68,8 +69,11 @@ $(document).ready(function(){
 				s=false;
 			}
 		}
+		if(d==false){
+			$('.error_forma').append('<span>Выберете способ доставки</span>');
+		}
 		if(p==false){
-			$('.error_forma').append('<span>Выберете способ доставки и способ оплаты</span>');
+			$('.error_forma').append('<span>Выберете способ оплаты</span>');
 		}
 		if(s==true && p==true){
 
