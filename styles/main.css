@@ -66,6 +66,16 @@ form.form_search .search {
   top: 5px;
   cursor: pointer;
 }
+form .error_forma {
+  margin: 0;
+  color: #d80c0c;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+form .error_forma span {
+  display: block;
+  padding: 5px 0;
+}
 footer img {
   display: block;
   margin: auto;
