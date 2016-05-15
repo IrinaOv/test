@@ -60,16 +60,15 @@ $(document).ready(function(){
 				$('.error_forma').append('<span>Не верно введен электронный адрес</span>');
 				s=false;
 			}
-
 		}
 		if(p==false){
 			$('.error_forma').append('<span>Выберете способ доставки и способ оплаты</span>');
 		}
 		if(s==true && p==true){
-			console.log('все верно')
+
+			console.log('все верно');
+			
 		}
-		console.log(p);
-		console.log(s);
 	})
 
 })

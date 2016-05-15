@@ -76,6 +76,10 @@ form .error_forma span {
   display: block;
   padding: 5px 0;
 }
+button:focus,
+input:focus {
+  outline: none;
+}
 footer img {
   display: block;
   margin: auto;
