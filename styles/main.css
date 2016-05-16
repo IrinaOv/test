@@ -30,6 +30,7 @@ a.name_book {
 }
 a.name_book:hover {
   text-decoration: underline;
+  color: #e51907;
 }
 .row {
   margin-bottom: 40px;
@@ -106,6 +107,7 @@ h1 {
   margin-bottom: 40px;
   display: inline-block;
   vertical-align: top;
+  width: 100%;
 }
 .book img {
   width: 100%;
@@ -118,6 +120,8 @@ h1 {
   font-size: 18px;
   text-align: center;
   padding: 10px 5%;
+  max-width: 210px;
+  margin: auto;
 }
 .button {
   margin: auto;
@@ -126,10 +130,13 @@ h1 {
   padding: 14px;
   text-align: center;
   color: #4285be;
-  margin: 0 5% 80px;
+  margin: 0 auto 80px;
+  width: 280px;
 }
 .button:hover {
   cursor: pointer;
+  border: 2px solid #e51907;
+  color: #e51907;
 }
 button.order {
   width: 250px;
@@ -186,7 +193,6 @@ button.order {
   margin: auto;
 }
 .book_about img {
-  /*max-height:595px;*/
   max-wdth: 418px;
   width: 100%;
 }
@@ -227,11 +233,25 @@ button.buy {
   background: #805582;
   border: none;
   border-radius: 10px;
-  background: #805e82;
-  background: -moz-linear-gradient(top, #805e82 0%, #623d64 100%);
-  background: -webkit-linear-gradient(top, #805e82 0%, #623d64 100%);
-  background: linear-gradient(to bottom, #805e82 0%, #623d64 100%);
+  background: #855788;
+  background: -moz-linear-gradient(top, #855788 0%, #633a65 100%);
+  background: -webkit-linear-gradient(top, #855788 0%, #633a65 100%);
+  background: linear-gradient(to bottom, #855788 0%, #633a65 100%);
+  box-shadow: 7px 16px 47px -3px #8c8c8c;
   margin-bottom: 30px;
+}
+button.buy:hover {
+  background: #c28dc5;
+  background: -moz-linear-gradient(top, #c28dc5 0%, #4b2a4e 100%);
+  background: -webkit-linear-gradient(top, #c28dc5 0%, #4b2a4e 100%);
+  background: linear-gradient(to bottom, #c28dc5 0%, #4b2a4e 100%);
+}
+button.buy:focus {
+  background: #855788;
+  background: -moz-linear-gradient(top, #855788 0%, #633a65 100%);
+  background: -webkit-linear-gradient(top, #855788 0%, #633a65 100%);
+  background: linear-gradient(to bottom, #855788 0%, #633a65 100%);
+  box-shadow: 5px 4px 28px -8px #8c8c8c;
 }
 .scraffi {
   font-size: 1rem;
@@ -339,6 +359,20 @@ textarea {
     margin: 0 auto 30px;
     display: block;
   }
+  .book {
+    width: 50%;
+  }
+  .forma form > div {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .forma form > div.forma_book {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
 }
 @media only screen and (min-width: 600px) {
   h1 {
@@ -419,11 +453,6 @@ textarea {
   .forma {
     max-width: 1024px;
   }
-  .forma form > div {
-    display: inline-block;
-    margin: 2%;
-    vertical-align: top;
-  }
   .comments {
     width: 40%;
   }
@@ -469,6 +498,15 @@ textarea {
   }
   .comments {
     width: 35%;
+  }
+  .forma form > div {
+    display: inline-block;
+    margin: 2%;
+    vertical-align: top;
+    width: 32%;
+  }
+  .forma form > div.forma_book {
+    width: 20%;
   }
 }
 @media only screen and (min-width: 953px) {

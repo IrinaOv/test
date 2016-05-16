@@ -1,7 +1,477 @@
+html {
+  font-size: 16px;
+}
 body {
-  background: #CC594A;
-  color: #B8CC24;
+  background: #ffffff;
+  color: #333333;
+  padding: 40px 10px 0;
+  max-width: 1366px;
+  margin: auto;
+  /*width:320px;*/
+  font-family: Arial;
+}
+@font-face {
+  font-family: fuchsia;
+  /* Гарнитура шрифта */
+  src: url(../font/fuchsia.otf);
+  /* Путь к файлу со шрифтом */
+}
+a,
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+a.name_book {
+  color: #0260F6;
+}
+a.name_book:hover {
+  text-decoration: underline;
+}
+.row {
+  margin-bottom: 40px;
+}
+.logo {
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.logo img {
+  width: 100%;
+  max-width: 300px;
+}
+form.form_search {
+  position: relative;
+  width: 264px;
+  margin: auto;
+}
+form.form_search input[type="search"] {
+  width: 264px;
+  height: 30px;
+  border: 1px solid #bfbfbf;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+form.form_search .search {
+  position: absolute;
+  background: url(../images/search.png);
+  content: " ";
+  width: 20px;
+  height: 19px;
+  background-position: 0 0;
+  left: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+form .error_forma {
+  margin: 0;
+  color: #d80c0c;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+form .error_forma span {
+  display: block;
+  padding: 5px 0;
+}
+form .adress.disable {
+  display: none;
+}
+button:focus,
+input:focus {
+  outline: none;
+}
+footer img {
+  display: block;
+  margin: auto;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 h1 {
-  background: #8BC5FF;
+  font-size: 2.38rem;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+  color: #000;
+}
+.row_books {
+  max-width: 1200px;
+  margin: auto;
+}
+.book {
+  margin-bottom: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+.book img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: 300px;
+  max-width: 210px;
+}
+.book .book-title {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 5%;
+}
+.button {
+  margin: auto;
+  border: 2px solid #96c2e4;
+  border-radius: 15px;
+  padding: 14px;
+  text-align: center;
+  color: #4285be;
+  margin: 0 5% 80px;
+}
+.button:hover {
+  cursor: pointer;
+}
+button.order {
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: #cecece;
+  font-size: 1.2rem;
+  margin-bottom: 80px;
+  display: block;
+}
+.eye {
+  width: 33%;
+  height: auto;
+  border-radius: 100px;
+  border: 4px solid #000;
+  background: #000;
+  margin: auto;
+  position: absolute;
+  top: 45%;
+  left: 33%;
+}
+.eye .eye_white {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.eye .eye_white {
+  animation-name: shadow;
+  animation-duration: 7s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow {
+  0% {
+    transform: scaleY(1);
+  }
+  35% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+}
+.book_about {
+  width: 90%;
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+  margin: auto;
+}
+.book_about img {
+  /*max-height:595px;*/
+  max-wdth: 418px;
+  width: 100%;
+}
+.black_eye {
+  position: absolute;
+  width: 17%;
+  height: auto;
+  background: #000;
+  top: 42%;
+  left: 42%;
+  border-radius: 50px;
+}
+.book_top {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.row.book {
+  margin-bottom: 60px;
+}
+.advantages {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 60px;
+  width: 80%;
+  margin: auto;
+}
+.advantages img {
+  display: block;
+  margin: auto;
+  margin-bottom: 25px;
+  width: 100%;
+}
+button.buy {
+  width: 100%;
+  font-size: 1.75rem;
+  color: #fff;
+  padding: 15px;
+  background: #805582;
+  border: none;
+  border-radius: 10px;
+  background: #805e82;
+  background: -moz-linear-gradient(top, #805e82 0%, #623d64 100%);
+  background: -webkit-linear-gradient(top, #805e82 0%, #623d64 100%);
+  background: linear-gradient(to bottom, #805e82 0%, #623d64 100%);
+  margin-bottom: 30px;
+}
+.scraffi {
+  font-size: 1rem;
+  font-style: italic;
+  color: #dcdcdc;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 80px;
+  max-width: 440px;
+  margin: 0 auto 100px;
+}
+.scraffi img {
+  display: block;
+  width: 70px;
+  margin: auto;
+  margin-top: 10px;
+}
+.topic {
+  color: #000;
+}
+.topic h1 {
+  font-size: 2rem;
+  text-align: left;
+  padding: 0;
+}
+.prolog {
+  text-align: center;
+  font-size: 1.5rem;
+}
+ul {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+ul li:before {
+  content: '—';
+}
+.row.avatar {
+  margin-bottom: 20px;
+}
+.avatar-img {
+  display: inline-block;
+  margin-bottom: 40px;
+  width: 150px;
+  text-align: center;
+}
+.incut {
+  padding: 30px 5px;
+  border-bottom: 1px solid #7d7d7d;
+  border-top: 1px solid #7d7d7d;
+  font-family: fuchsia;
+  font-size: 1.75rem;
+  text-align: center;
+}
+input[type="text"],
+textarea {
+  display: block;
+  width: 90%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.comments textarea {
+  height: 145px;
+}
+.row_forma {
+  font-size: 1.5rem;
+}
+.forma {
+  font-size: 1.2rem;
+  margin: auto;
+}
+.forma form > div {
+  margin-bottom: 30px;
+}
+.forma form > div p {
+  margin: 10px 0;
+}
+.forma .book {
+  width: 100%;
+  text-align: center;
+}
+.forma input,
+.forma textarea {
+  border: 2px solid #000;
+  padding: 2px 5px;
+}
+.summ {
+  text-align: center;
+}
+.forma_book {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 500px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+  button.buy {
+    width: 440px;
+    margin: 0 auto 30px;
+    display: block;
+  }
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+    max-width: 1200px;
+    margin: auto;
+    display: block;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  .row.about {
+    max-width: 640px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  p {
+    margin: 30px 0;
+  }
+  row.book_eye {
+    margin-bottom: 30px;
+  }
+  .left {
+    float: left;
+    width: 20%;
+    padding-left: 2%;
+  }
+  .right {
+    float: right;
+    width: 20%;
+    padding-right: 2%;
+  }
+  .book_about,
+  .book_top {
+    width: 65%;
+    margin: auto;
+    position: relative;
+  }
+  .book_about img {
+    width: 100%;
+  }
+  .book_top {
+    margin: 50px auto 0px;
+  }
+  .book_eye {
+    display: inline-block;
+    width: 55%;
+  }
+  .advantages {
+    width: 100%;
+  }
+  .prolog {
+    font-size: 2rem;
+    max-width: 880px;
+    margin: auto;
+  }
+  .topic h1 {
+    font-size: 2.6rem;
+  }
+  .topic h2 {
+    font-size: 1.5rem;
+  }
+  .row.avatar {
+    text-align: center;
+  }
+  .incut {
+    padding: 50px 5px;
+    max-width: 880px;
+    margin: auto;
+  }
+  .row.incut {
+    margin-bottom: 50px;
+  }
+  .row_forma {
+    max-width: 1024px;
+    margin: 25px auto;
+  }
+  .forma {
+    max-width: 1024px;
+  }
+  .forma form > div {
+    display: inline-block;
+    margin: 2%;
+    vertical-align: top;
+  }
+  .comments {
+    width: 40%;
+  }
+  .forma form input[type="submit"] {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 100px;
+  }
+}
+@media only screen and (min-width: 680px) {
+  .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  form.form_search {
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+  }
+  form.form_search .search {
+    top: 15px;
+  }
+  header {
+    padding: 0 40px;
+    margin: auto;
+  }
+  .book {
+    width: 32%;
+    margin-bottom: 70px;
+  }
+  .button {
+    width: 280px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: -20px;
+  }
+  .forma_book {
+    text-align: center;
+    width: 20%;
+  }
+  .forma_book img {
+    width: 100%;
+  }
+  .comments {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 953px) {
+  .book {
+    width: 24%;
+  }
 }
