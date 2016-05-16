@@ -11,7 +11,7 @@ $(document).ready(function(){
 			name=books.title;
 			$('a.name_book').attr('href','book.html#'+idBook);
 			$('.summ span').attr('data-count',$('.forma_book').attr('data-price'));	
-			$('.summ span').text($('.summ span').attr('data-count')+'Z');	
+			$('.summ span').text($('.summ span').attr('data-count')+'$');	
 		}
 	})
 	var flagDelivery=false;
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		url:'https://netology-fbb-store-api.herokuapp.com/order/delivery',
 		success:function(delivery){
 			delivery.forEach(function(item,i){
-				$('.delivery').append('<p><input type="radio" name="доставка" value="'+item.name+'" data-price="'+item.price+'"data-address="'+item.needAdress+'"'+'data-id="'+item.id+'"data-delivery="'+item.currency+'">'+item.name+' - '+item.price+'Z'+'</p>')
+				$('.delivery').append('<p><input type="radio" name="доставка" value="'+item.name+'" data-price="'+item.price+'"data-address="'+item.needAdress+'"'+'data-id="'+item.id+'"data-delivery="'+item.currency+'">'+item.name+' - '+item.price+'$'+'</p>')
 			})
 			$('input:radio[name=доставка]').on('change', function (){
 				priceBook=$('.forma_book').attr('data-price');
@@ -29,7 +29,7 @@ $(document).ready(function(){
 				price2=parseFloat($(this).attr('data-price'));
 				price=prise1+price2;
 				$('.summ span').attr('data-count',price);
-				$('.summ span').text($('.summ span').attr('data-count')+'Z');
+				$('.summ span').text($('.summ span').attr('data-count')+'$');
 				flagDelivery=true;
 				if($(this).attr('data-address')=='true')
 				{
@@ -98,15 +98,21 @@ $(document).ready(function(){
 						'currency':currency
 					}
 					};
+					$('.summ').empty();
+					$('.row.row_forma').empty();
+					$('.forma form').css('display','none');
+					$('.row.row_forma').css('margin-bottom','30%');
+					$('.row.row_forma').css('text-align','center');
+					$('button.order').toggle();
 				$.ajax({
 					type:'POST',
 					url:'https://netology-fbb-store-api.herokuapp.com/order',
 					data:post,
 					success:function(request){
-						console.log('заказ отправлен');
+						$('.row.row_forma').append('Ваш заказ успешно отправлен <a href="index.html">вернуться на главную</a>');
 					},
 					error:  function(){
-						console.log('Возникла ошибка: ');
+						$('.row.row_forma').append('При отправке заказа произошла ошибка, повторите попытку позже <br><a href="index.html">вернуться на главную</a>');
           },
 				})	
 		}

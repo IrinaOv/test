@@ -25,10 +25,10 @@ a:hover {
 button:hover {
   cursor: pointer;
 }
-a.name_book {
+.row.row_forma a {
   color: #0260f6;
 }
-a.name_book:hover {
+.row.row_forma a:hover {
   text-decoration: underline;
   color: #e51907;
 }
