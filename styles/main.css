@@ -7,26 +7,22 @@ body {
   padding: 40px 10px 0;
   max-width: 1366px;
   margin: auto;
-  /*width:320px;*/
   font-family: Arial;
 }
 @font-face {
   font-family: fuchsia;
   src: url(../font/fuchsia.otf);
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
-a,
+a {
+  color: #000;
+  text-decoration: none;
+}
 a:hover {
   color: #000;
   text-decoration: none;
 }
-button:hover {
-  cursor: pointer;
-}
 .row.row_forma a {
-  color: #0260f6;
+  color: #0260F6;
 }
 .row.row_forma a:hover {
   text-decoration: underline;
@@ -79,9 +75,8 @@ form .error_forma span {
 form .adress.disable {
   display: none;
 }
-button:focus,
 input:focus {
-  outline: none;
+  outline: noone;
 }
 footer img {
   display: block;
@@ -96,7 +91,7 @@ h1 {
   text-align: center;
   margin: 0;
   padding: 0 10px;
-  color: #000000;
+  color: #000;
 }
 .row_books {
   max-width: 1200px;
@@ -150,6 +145,12 @@ button.order {
   font-size: 1.2rem;
   margin-bottom: 80px;
   display: block;
+}
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
 }
 .eye {
   width: 33%;
@@ -210,6 +211,9 @@ button.order {
 .book_top {
   font-size: 1.5rem;
   text-align: center;
+}
+.book_top strong {
+  color: #fc5454;
 }
 .row.book {
   margin-bottom: 60px;
@@ -301,7 +305,7 @@ ul li:before {
 .avatar-img {
   display: inline-block;
   margin-bottom: 40px;
-  width: 150px;
+  width: 49%;
   text-align: center;
 }
 .incut {
@@ -375,6 +379,9 @@ textarea {
     vertical-align: top;
     text-align: center;
   }
+  .avatar-img {
+    width: 150px;
+  }
 }
 @media only screen and (min-width: 600px) {
   h1 {
@@ -391,11 +398,14 @@ textarea {
     margin: auto;
     margin-bottom: 50px;
   }
+  .row.avatar {
+    text-align: center;
+  }
+  .row.book_eye {
+    margin-bottom: 30px;
+  }
   p {
     margin: 30px 0;
-  }
-  row.book_eye {
-    margin-bottom: 30px;
   }
   .left {
     float: left;
@@ -430,15 +440,13 @@ textarea {
     font-size: 2rem;
     max-width: 880px;
     margin: auto;
+    margin-bottom: 50px;
   }
   .topic h1 {
     font-size: 2.6rem;
   }
   .topic h2 {
     font-size: 1.5rem;
-  }
-  .row.avatar {
-    text-align: center;
   }
   .incut {
     padding: 50px 5px;
@@ -498,7 +506,7 @@ textarea {
   .forma_book img {
     width: 100%;
   }
-  .comments {
+  .forma_book .comments {
     width: 35%;
   }
   .forma form > div {

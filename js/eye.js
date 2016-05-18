@@ -6,7 +6,6 @@ $(function(){
 			 $('.black_eye').height($('.black_eye').width()*1);
 		});
 	$(window).mousemove(function (pos) { 
-		var scrollTop=window.pageYOffset*100/$(document).height();
 		var left=pos.pageX*100/$(document).width()-8;
 		var top=pos.pageY*100/$(document).height();
 		pupil_left=left;
@@ -24,7 +23,5 @@ $(function(){
 			pupil_top=75;
 		}
 			$(".black_eye").css('left',pupil_left+'%').css('top',pupil_top+'%');
-			console.log(left);
-			console.log(top);
 		});
 });

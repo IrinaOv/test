@@ -5,62 +5,62 @@ body {
 	padding:40px 10px 0;
 	max-width:1366px;
 	margin:auto;
-	/*width:320px;*/
 	font-family:Arial;
 }
 @font-face {
-    font-family: fuchsia; /* Гарнитура шрифта */
-    src: url(../font/fuchsia.otf); /* Путь к файлу со шрифтом */
+    font-family: fuchsia;
+    src: url(../font/fuchsia.otf);
    }
-a,a:hover{
+a{
 	color:#000;
-	text-decoration:none
+	text-decoration:none;
+	&:hover{
+		color:#000;
+		text-decoration:none;
+	}
 }
-button:hover{
-	cursor:pointer
-}
-.row.row_forma a{
-	color:#0260F6
-}
-.row.row_forma a:hover{
-	text-decoration:underline;
-	color:#e51907;
+.row.row_forma {
+	a{
+		color:#0260F6;
+		&:hover{
+			text-decoration:underline;
+			color:#e51907;
+		}
+	}
 }
 .row{margin-bottom:40px}
 .logo{
 	margin:auto;
 	margin-bottom:40px;
-	text-align:center
-}
-	.logo img{
+	text-align:center;
+	img{
 		width:100%;
-		max-width:300px
+		max-width:300px;
 	}
-form.form_search{
-	position:relative;
-	width:264px;
-	margin:auto;
-
-	input[type="search"]{
-		width:264px;
-		height:30px;
-		border:1px solid #bfbfbf;
-		border-radius:15px;
-		padding-left:30px;
-	}
-	.search{
-		position:absolute;
-		background:url(../images/search.png);
-		content:" ";
-		width:20px;
-		height:19px;
-		background-position:0 0;
-		left:5px;
-		top:5px;
-	}
-
 }
 form {
+	&.form_search{
+		position:relative;
+		width:264px;
+		margin:auto;
+		input[type="search"]{
+			width:264px;
+			height:30px;
+			border:1px solid #bfbfbf;
+			border-radius:15px;
+			padding-left:30px;
+		}
+		.search{
+			position:absolute;
+			background:url(../images/search.png);
+			content:" ";
+			width:20px;
+			height:19px;
+			background-position:0 0;
+			left:5px;
+			top:5px;
+		}
+	}
 		.error_forma{
 		margin:0;
 		color:#d80c0c;
@@ -68,33 +68,38 @@ form {
 		padding-left:20px;
 		span{
 			display:block;
-			padding:5px 0
+			padding:5px 0;
 		}
 	}
 	.adress.disable{
-		display:none
+		display:none;
 	}
 }
-button:focus,input:focus{
-outline:none
+input{
+	&:focus{
+		outline:noone;
+	}
 }
-footer img{
-	display:block;
-	margin:auto
+footer {
+	img{
+		display:block;
+		margin:auto;
+	}
 }
 p{
 	font-size:1.2rem;
-	margin-bottom:30px
+	margin-bottom:30px;
 }
 h1 {
   font-size:2.38rem;
 	text-align:center;
 	margin:0;
 	padding:0 10px;
-	color:#000
+	color:#000;
 }
 .row_books{
-max-width:1200px;margin:auto
+	max-width:1200px;
+	margin:auto;
 }
 .book{
 	margin-bottom:40px;
@@ -114,7 +119,7 @@ max-width:1200px;margin:auto
 		max-width: 210px;
 		margin: auto;
 		u{
-			color:#467fb6
+			color:#467fb6;
 		}
 	}
 }
@@ -127,24 +132,31 @@ max-width:1200px;margin:auto
 	color:#4285be;
 	margin:0 auto 80px;
 	width: 280px;
+	&:hover{
+		cursor:pointer;
+		border: 2px solid #e51907;
+		color: #e51907;
+	}
 }
-.button:hover{
-	cursor:pointer;
-  border: 2px solid #e51907;
-  color: #e51907;
+button {
+	&.order{		
+		width: 250px;
+		margin: auto;
+		padding: 10px;
+		border: 2px solid #000;
+		border-radius: 10px;
+		background: #cecece;
+		font-size: 1.2rem;
+		margin-bottom: 80px;
+		display:block;
+		}
+	&:hover{
+		cursor:pointer;
+	}
+	&:focus{
+		outline:none;
+	}
 }
-button.order {
-  width: 250px;
-  margin: auto;
-  padding: 10px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  background: #cecece;
-  font-size: 1.2rem;
-  margin-bottom: 80px;
-	display:block
-}
-
 .eye{
 	width:33%;
 	height:auto;
@@ -159,7 +171,7 @@ button.order {
 		background:#fff;
 		width:100%;
 		height:100%;
-		border-radius:100px
+		border-radius:100px;
 	}
 		.eye_white{
 		animation-name: shadow;
@@ -180,11 +192,11 @@ button.order {
 	position:relative;
 	margin-bottom:40px;
 	text-align:center;
-	margin:auto
-}
-.book_about img{
-	max-wdth:418px;
-	width:100%
+	margin:auto;
+	img{
+		max-wdth:418px;
+		width:100%
+	}
 }
 .black_eye{
 	position:absolute;
@@ -197,10 +209,13 @@ button.order {
 }
 .book_top{
 	font-size:1.5rem;
-	text-align:center
+	text-align:center;
+	strong{
+		color:#fc5454;
+	}
 }
 .row.book{
-	margin-bottom:60px
+	margin-bottom:60px;
 }
 .advantages{
 	text-align:center;
@@ -208,12 +223,12 @@ button.order {
 	margin-bottom:60px;
 	width:80%;
 	margin:auto;
-}
-.advantages img{
-	display:block;
-	margin:auto;
-	margin-bottom:25px;
-	width:100%
+	img{
+		display:block;
+		margin:auto;
+		margin-bottom:25px;
+		width:100%;
+	}
 }
 button.buy{
 	width:100%;
@@ -228,20 +243,20 @@ button.buy{
 	background: -webkit-linear-gradient(top, #855788 0%,#633a65 100%); 
 	background: linear-gradient(to bottom, #855788 0%,#633a65 100%);
 	box-shadow: 7px 16px 47px -3px #8c8c8c;
-	margin-bottom:30px
-}
-button.buy:hover{
-	background: #c28dc5;
-	background: -moz-linear-gradient(top,  #c28dc5 0%, #4b2a4e 100%);
-	background: -webkit-linear-gradient(top,  #c28dc5 0%,#4b2a4e 100%); 
-	background: linear-gradient(to bottom,  #c28dc5 0%,#4b2a4e 100%); 
-}
-button.buy:focus{
-  background: #855788;
-  background: -moz-linear-gradient(top, #855788 0%, #633a65 100%);
-  background: -webkit-linear-gradient(top, #855788 0%, #633a65 100%);
-  background: linear-gradient(to bottom, #855788 0%, #633a65 100%);
-	box-shadow: 5px 4px 28px -8px #8c8c8c;
+	margin-bottom:30px;
+	&:hover{
+		background: #c28dc5;
+		background: -moz-linear-gradient(top,  #c28dc5 0%, #4b2a4e 100%);
+		background: -webkit-linear-gradient(top,  #c28dc5 0%,#4b2a4e 100%); 
+		background: linear-gradient(to bottom,  #c28dc5 0%,#4b2a4e 100%); 
+	}
+	&:focus{
+		background: #855788;
+		background: -moz-linear-gradient(top, #855788 0%, #633a65 100%);
+		background: -webkit-linear-gradient(top, #855788 0%, #633a65 100%);
+		background: linear-gradient(to bottom, #855788 0%, #633a65 100%);
+		box-shadow: 5px 4px 28px -8px #8c8c8c;
+	}
 }
 .scraffi{
 	font-size:1rem;
@@ -251,14 +266,15 @@ button.buy:focus{
 	padding:0 10px;
 	margin-bottom:80px;
 	max-width:440px;
-	margin:0 auto 100px
+	margin:0 auto 100px;
+	img{
+		display:block;
+		width:70px;
+		margin:auto;
+		margin-top:10px
+	}
 }
-.scraffi img{
-	display:block;
-	width:70px;
-	margin:auto;
-	margin-top:10px
-}
+
 .topic{
 	color:#000;
 	 h1{
@@ -267,7 +283,7 @@ button.buy:focus{
 		 padding:0
 	 }
  }
- .prolog{
+.prolog{
 	text-align:center;
 	font-size:1.5rem;
 }
@@ -276,7 +292,7 @@ font-size:1.2rem;
 padding:0;margin:0;
 	li{
 		list-style-type:none;
-		margin-bottom:20px
+		margin-bottom:20px;
 	}
 	li:before{
 		content:'—'
@@ -289,8 +305,8 @@ padding:0;margin:0;
 .avatar-img{
 	display:inline-block;
 	margin-bottom:40px;
-	width:150px;
-	text-align:center
+	width:49%;
+	text-align:center;
 }
 .incut{
 	padding:30px 5px;
@@ -298,7 +314,7 @@ padding:0;margin:0;
 	border-top:1px solid #7d7d7d;
 	font-family:fuchsia;
 	font-size:1.75rem;
-	text-align:center
+	text-align:center;
 }
 input[type="text"],textarea{
 	display:block;
@@ -352,12 +368,15 @@ h1{font-size:3.4rem}
 		width:49%;
 		display:inline-block;
 		vertical-align:top;
+		&.forma_book{
+			width:100%;
+			display:inline-block;
+			vertical-align:top;
+			text-align:center
+		}
 	}	
-	.forma form > div.forma_book{
-		width:100%;
-		display:inline-block;
-		vertical-align:top;
-		text-align:center
+	.avatar-img{
+		width:150px
 	}
 }
 @media only screen and (min-width:600px){
@@ -368,18 +387,23 @@ h1{font-size:3.4rem}
 		display: block;
 	}
 	.row{
-		margin-bottom:50px
-	}
-	.row.about{
-		max-width:640px;
-		margin:auto;
-		margin-bottom:50px
+		margin-bottom:50px;
+		&.about{
+			max-width:640px;
+			margin:auto;
+			margin-bottom:50px
+		}
+		&.avatar{
+			text-align:center
+		}
+		&.book_eye{
+			margin-bottom:30px
+		}
 	}
 	p{
 		margin:30px 0
 	}
-	row.book_eye{margin-bottom:30px}
-		.left{
+	.left{
 		float:left;
 		width:20%;
 		padding-left:2%
@@ -410,17 +434,17 @@ h1{font-size:3.4rem}
 	.prolog{
 		font-size:2rem;
 		max-width:880px;
-		margin:auto
+		margin:auto;
+		margin-bottom:50px
 	}
-.topic h1{
+.topic{ 
+	h1{
 		font-size:2.6rem;
 	}
-	.topic h2{
+	h2{
 		font-size:1.5rem
 	}
-	.row.avatar{
-		text-align:center
-	}
+}
 	.incut{
 		padding:50px 5px;
 		max-width:880px;
@@ -450,34 +474,38 @@ h1{font-size:3.4rem}
 	display:inline-block;
 	margin-bottom:10px;
 	}
-	form.form_search{display:inline-block;
+	form.form_search{
+	display:inline-block;
 		float:right;
 		padding-top:10px;
-		.search{top:15px}
+		.search{
+			top:15px;
+		}
 	}
 	header{
 		padding:0 40px;
-		margin:auto
+		margin:auto;
 	}
 	.book{
 		width:32%;
-		margin-bottom:70px
+		margin-bottom:70px;
 	}
 	.button{
 		width:280px;
 		margin:auto;
 		margin-bottom:100px;
-		margin-top:-20px
+		margin-top:-20px;
 	}
 	.forma_book{
-	text-align:center;
-	width:20%
-}
-.forma_book img{
-	width:100%
-}
+		text-align:center;
+		width:20%;
+		img{
+			width:100%;
+		}
+	}
+.forma_book 
 .comments{
-	width:35%
+	width:35%;
 }
 .forma {
 	form > div{
@@ -485,13 +513,13 @@ h1{font-size:3.4rem}
 		margin:2%;
 		vertical-align:top;
 		width:32%;
-	}
-	form > div.forma_book{
+		&.forma_book{
 			width:20%
 		}
+	}
 }
 }
-	@media only screen and (min-width:953px)
+@media only screen and (min-width:953px)
 {
 .book{width:24%}
 }

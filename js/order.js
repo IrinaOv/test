@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	idBook= window.location.hash.replace("#","");
-	var name;
 	var currency;
 	$.ajax({
 		url:'https://netology-fbb-store-api.herokuapp.com/book/'+idBook,
@@ -8,7 +7,6 @@ $(document).ready(function(){
 			$('.forma_book').append('<a href="book.html#'+idBook+'"><img src="'+books.cover.small+'"></a>');
 			$('.forma_book').attr('data-price',books.price);
 			$('a.name_book').append(books.title);
-			name=books.title;
 			$('a.name_book').attr('href','book.html#'+idBook);
 			$('.summ span').attr('data-count',$('.forma_book').attr('data-price'));	
 			$('.summ span').text($('.summ span').attr('data-count')+'$');	
@@ -95,7 +93,7 @@ $(document).ready(function(){
 				var post={
 					'manager':'ovi@uvelirsoft.ru',
 					'book':idBook,
-					'name':name,
+					'name':$('input[name=Имя]').val(),
 					'phone':$('input[name=Телефон]').val(),
 					'email':$('input[name=почта]').val(),
 					'comment':$('textarea[name=Комментарий]').val(),
