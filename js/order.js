@@ -17,6 +17,7 @@ $(document).ready(function(){
 	var flagDelivery=false;
 	var flagPayment=false;
 	var flagInput=false;
+	var flagAdress=true;
 	$.ajax({
 		url:'https://netology-fbb-store-api.herokuapp.com/order/delivery',
 		success:function(delivery){
@@ -33,10 +34,12 @@ $(document).ready(function(){
 				flagDelivery=true;
 				if($(this).attr('data-address')=='true')
 				{
-					$('form .adress').removeClass('disable')
+					$('form .adress').removeClass('disable');
+					flagAdress=false;
 				}
 				else{
-					$('form .adress').addClass('disable')
+					$('form .adress').addClass('disable');
+					flagAdress=true;
 				}
 				currency=$('input:radio[name=доставка]:checked').attr('data-delivery');
 				$(".payment").text('Способ оплаты:');
@@ -57,8 +60,8 @@ $(document).ready(function(){
 
 	$('button.order').on('click',function(){
 		$('.error_forma').text('');
-		if($('input[name=Имя]').val()==''||$('input[name=Телефон]').val()==''||$('input[name=почта]').val()==''){
-			$('.error_forma').append('<span>Заполните поля Имя, Телефон, Эл.адрес</span>');
+		if($('input[name=Имя]').val()==''||$('input[name=Телефон]').val()==''||$('input[name=почта]').val()==''||$('textarea[name="Комментарий"]').val()==''){
+			$('.error_forma').append('<span>Заполните поля Имя, Телефон, Эл.адрес, Комментарий</span>');
 			flagInput=false;
 		}
 		else{
@@ -75,13 +78,20 @@ $(document).ready(function(){
 				flagInput=false;
 			}
 		}
+		if (!$('form .adress').hasClass('disable') && $('form .adress textarea').val()==''){
+			flagAdress=false;
+			$('.error_forma').append('<span>Заполните поле адрес</span>');
+		}
+		else{
+			flagAdress=true;
+		}
 		if(flagDelivery==false){
 			$('.error_forma').append('<span>Выберете способ доставки</span>');
 		}
 		if(flagPayment==false){
 			$('.error_forma').append('<span>Выберете способ оплаты</span>');
 		}
-		if(flagInput==true && flagPayment==true){
+		if(flagInput==true && flagPayment==true && flagAdress==true && flagDelivery==true){
 				var post={
 					'manager':'ovi@uvelirsoft.ru',
 					'book':idBook,
