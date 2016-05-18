@@ -180,10 +180,10 @@ button.order {
   0% {
     transform: scaleY(1);
   }
-  35% {
+  10% {
     transform: scaleY(0);
   }
-  70% {
+  20% {
     transform: scaleY(1);
   }
 }
