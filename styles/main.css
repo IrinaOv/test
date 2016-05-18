@@ -122,6 +122,9 @@ h1 {
   max-width: 210px;
   margin: auto;
 }
+.book .book-title u {
+  color: #467fb6;
+}
 .button {
   margin: auto;
   border: 2px solid #96c2e4;

@@ -9,7 +9,7 @@ $.ajax({
 		booksLoad=function(){
 		 while(i<books.length && p!=4)
 			{
-				$('.row_books').append('<div class="book" id="'+books[i].id+'"><a href="book.html#'+books[i].id+'"><img src="'+books[i].cover.small+'"><div class="book-title">'+books[i].title+'</div></a></div>');
+				$('.row_books').append('<div class="book" id="'+books[i].id+'"><a href="book.html#'+books[i].id+'"><img src="'+books[i].cover.small+'"><div class="book-title">'+books[i].info+'</div></a></div>');
 				p++;
 				i++;
 				if(i==books.length){
