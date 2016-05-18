@@ -109,7 +109,6 @@ $(document).ready(function(){
 					$('.summ').empty();
 					$('.row.row_forma').empty();
 					$('.forma form').css('display','none');
-					$('.row.row_forma').css('margin-bottom','30%');
 					$('.row.row_forma').css('text-align','center');
 					$('button.order').toggle();
 				$.ajax({
@@ -118,6 +117,7 @@ $(document).ready(function(){
 					data:post,
 					success:function(request){
 						$('.row.row_forma').append('Ваш заказ успешно отправлен <a href="index.html">вернуться на главную</a>');
+						$('.row.row_forma').css('margin-bottom',$(window).height()-$('html').height()+27+'px');
 					},
 					error:  function(){
 						$('.row.row_forma').append('При отправке заказа произошла ошибка, повторите попытку позже <br><a href="index.html">вернуться на главную</a>');
